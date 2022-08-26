@@ -1,3 +1,4 @@
+require('dotenv').config();
 const express = require('express');
 const path = require('path');
 const app = express();
@@ -12,7 +13,6 @@ const partialPath = path.join(__dirname, '../templates/partials');
 
 app.use(express.json());
 
-
 // // to use static website in express
 // app.use(express.static(staticPath));
 
@@ -22,7 +22,6 @@ app.set("view engine", "hbs");
 app.set("views", templatePath);
 // // to register partials path
 hbs.registerPartials(partialPath);
-
 
 // // to render dynamic page
 app.get('/', (req, res) => {
@@ -51,7 +50,6 @@ app.post("/education-history", async (req, res) => {
         res.status(400).send(error);
     }
 });
-
 
 // // to render dynamic page
 app.get('/about', (req, res) => {
