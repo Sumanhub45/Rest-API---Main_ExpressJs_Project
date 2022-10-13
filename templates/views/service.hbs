@@ -13,64 +13,97 @@
     {{>nav}}
     <section class="text-blue-400 bg-blue-900 body-font">
         <div class="container px-5 py-24 mx-auto flex flex-wrap">
-            <h2 class="sm:text-3xl text-2xl text-white font-medium title-font mb-2 md:w-2/5">Kickstarter Actually
-                Pinterest Brunch Bitters Occupy</h2>
+            <h2 class="sm:text-3xl text-2xl text-white font-medium title-font mb-2 md:w-2/5">For education-history Get request end Point</h2>
             <div class="md:w-3/5 md:pl-6">
-                <p class="leading-relaxed text-base">Taxidermy bushwick celiac master cleanse microdosing seitan.
-                    Fashion axe four dollar toast truffaut, direct trade kombucha brunch williamsburg keffiyeh gastropub
-                    tousled squid meh taiyaki drinking vinegar tacos.</p>
+                <p class="leading-relaxed text-base">router.get('/education-history', async(req, res) => {
+    try {
+        const education = await Education.find();
+        res.json(education);
+        
+    } catch (err) {
+        res.json({ message: err });
+    }
+} );</p>
                 <div class="flex md:mt-4 mt-6">
+                    <a href="http://localhost:8000/education-history">
                     <button
-                        class="inline-flex text-white bg-indigo-500 border-0 py-1 px-4 focus:outline-none hover:bg-indigo-600 rounded">Button</button>
+                        class="inline-flex text-white bg-indigo-500 border-0 py-1 px-4 focus:outline-none hover:bg-indigo-600 rounded">Button
+                    </button>
+                    </a>
                 </div>
             </div>
         </div>
     </section>
         <section class="text-blue-400 bg-blue-900 body-font">
         <div class="container px-5 py-24 mx-auto flex flex-wrap">
-            <h2 class="sm:text-3xl text-2xl text-white font-medium title-font mb-2 md:w-2/5">Kickstarter Actually
-                Pinterest Brunch Bitters Occupy</h2>
+            <h2 class="sm:text-3xl text-2xl text-white font-medium title-font mb-2 md:w-2/5">For education-history Get, POST, DELETE and patch request by id, institutionName, councilBoard, examinationName</h2>
             <div class="md:w-3/5 md:pl-6">
-                <p class="leading-relaxed text-base">Taxidermy bushwick celiac master cleanse microdosing seitan.
-                    Fashion axe four dollar toast truffaut, direct trade kombucha brunch williamsburg keffiyeh gastropub
-                    tousled squid meh taiyaki drinking vinegar tacos.</p>
+                <p class="leading-relaxed text-base">router.get('/education-history/id/:id', async(req, res) => {
+    try {
+        const education = await Education.findById(req.params.id);
+        res.json(education);
+    } catch (err) {
+        res.json({ message: err });
+    }
+} );
+</p>
                 <div class="flex md:mt-4 mt-6">
+                     <a href="http://localhost:8000/education-history/id/:6317b7c40939548baca5e9e5">
                     <button
-                        class="inline-flex text-white bg-indigo-500 border-0 py-1 px-4 focus:outline-none hover:bg-indigo-600 rounded">Button</button>
+                        class="inline-flex text-white bg-indigo-500 border-0 py-1 px-4 focus:outline-none hover:bg-indigo-600 rounded">Button
+                    </button>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="text-blue-400 bg-blue-900 body-font">
+        <div class="container px-5 py-24 mx-auto flex flex-wrap">
+            <h2 class="sm:text-3xl text-2xl text-white font-medium title-font mb-2 md:w-2/5">For user Get request end Point</h2>
+            <div class="md:w-3/5 md:pl-6">
+                <p class="leading-relaxed text-base">router.get('/user', async(req, res) => {
+    try {
+        const user = await User.find();
+        res.json(user);
+        
+    } catch (err) {
+        res.json({ message: err });
+    }
+} );</p>
+                <div class="flex md:mt-4 mt-6">
+                    <a href="http://localhost:8000/user">
+                    <button
+                        class="inline-flex text-white bg-indigo-500 border-0 py-1 px-4 focus:outline-none hover:bg-indigo-600 rounded">Button
+                    </button>
+                    </a>
                 </div>
             </div>
         </div>
     </section>
         <section class="text-blue-400 bg-blue-900 body-font">
         <div class="container px-5 py-24 mx-auto flex flex-wrap">
-            <h2 class="sm:text-3xl text-2xl text-white font-medium title-font mb-2 md:w-2/5">Kickstarter Actually
-                Pinterest Brunch Bitters Occupy</h2>
+            <h2 class="sm:text-3xl text-2xl text-white font-medium title-font mb-2 md:w-2/5">For education-history Get, POST, DELETE and patch request by id, institutionName, councilBoard, examinationName</h2>
             <div class="md:w-3/5 md:pl-6">
-                <p class="leading-relaxed text-base">Taxidermy bushwick celiac master cleanse microdosing seitan.
-                    Fashion axe four dollar toast truffaut, direct trade kombucha brunch williamsburg keffiyeh gastropub
-                    tousled squid meh taiyaki drinking vinegar tacos.</p>
+                <p class="leading-relaxed text-base">router.get('/education-history/id/:id', async(req, res) => {
+    try {
+        const education = await Education.findById(req.params.id);
+        res.json(education);
+    } catch (err) {
+        res.json({ message: err });
+    }
+} );
+</p>
                 <div class="flex md:mt-4 mt-6">
+                     <a href='http://localhost:8000/user/id/:6318524e043494f879eb2d95'>
                     <button
-                        class="inline-flex text-white bg-indigo-500 border-0 py-1 px-4 focus:outline-none hover:bg-indigo-600 rounded">Button</button>
+                        class="inline-flex text-white bg-indigo-500 border-0 py-1 px-4 focus:outline-none hover:bg-indigo-600 rounded">Button
+                    </button>
+                    </a>
                 </div>
             </div>
         </div>
     </section>
-        <section class="text-blue-400 bg-blue-900 body-font">
-        <div class="container px-5 py-24 mx-auto flex flex-wrap">
-            <h2 class="sm:text-3xl text-2xl text-white font-medium title-font mb-2 md:w-2/5">Kickstarter Actually
-                Pinterest Brunch Bitters Occupy</h2>
-            <div class="md:w-3/5 md:pl-6">
-                <p class="leading-relaxed text-base">Taxidermy bushwick celiac master cleanse microdosing seitan.
-                    Fashion axe four dollar toast truffaut, direct trade kombucha brunch williamsburg keffiyeh gastropub
-                    tousled squid meh taiyaki drinking vinegar tacos.</p>
-                <div class="flex md:mt-4 mt-6">
-                    <button
-                        class="inline-flex text-white bg-indigo-500 border-0 py-1 px-4 focus:outline-none hover:bg-indigo-600 rounded">Button</button>
-                </div>
-            </div>
-        </div>
-    </section>
+        
     {{>footer}}
 </body>
 
